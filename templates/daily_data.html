@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="daily_data.html">Daily Data</a></li>
+                    <li><a href="charts.html">charts</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form>
+                <label for="morning_chapters">Number of chapters read in the morning:</label>
+                <input id="morning_chapters" type="number" name="morning_chapters" min=0 >
+                <label for="other_chapters">Number of chapters read other time during the day:</label>
+                <input id="other_chapters" type="number" name="other_chapters" min=0 >
+                <label for="riser_time">Riser time:</label>
+                <input id="riser_time" type="datetime" name="riser_time">
+                <fieldset>
+                    <legend>Notes taken?</legend>
+                    <input type="radio" name="notes" value="yes">Yes
+                    <input type="radio" name="notes" value="no">No
+                </fieldset>
+                <fieldset>
+                    <legend>Prayed?</legend>
+                    <input type="radio" name="notes" value="yes">Yes
+                    <input type="radio" name="notes" value="no">No
+                </fieldset>
+                <fieldset>
+                    <legend>Scripture memorized?</legend>
+                    <input type="radio" name="notes" value="yes">Yes
+                    <input type="radio" name="notes" value="no">No
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+</html>
