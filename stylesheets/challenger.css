@@ -3,10 +3,11 @@ body {
     margin: auto;
     
 }
-nav {
-    background-color: black;
+nav, footer {
+    background-color: grey;
     padding: 5px;
     color:white;
+    font-weight: bold;
 }
 nav a {
     text-decoration: none;
@@ -28,29 +29,37 @@ li.auth {
     float: right;
 }
 main {
-    padding: 20px;
-    background-color: #d3d3d3;
     min-height: 700px;
+    margin-top: 0px;
+}
+.daily_data {
+    width: 20%;
+    background-color: whitesmoke;
+    min-height: 700px;
+    float: left;
 }
 form {
-    width: 60%;
-    margin: auto;
     padding:10px;
 }
 form input {
-    width: 90%;
     display: block;
     margin: 5px;
-    border: none;
 }
 form input:focus {
     border: 1px solid rgb(173, 178, 230);
 }
 form input[type='submit'] {
-    background-color: #1b4edb;
+    background-color: grey;
     margin-top: 5px;
-    width: 20%;
 }
 form input {
     padding: 10px;
+}
+.charts {
+    float: right;
+    width: 60%;
+}
+footer {
+    text-align: center;
+    padding: 15px;
 }
