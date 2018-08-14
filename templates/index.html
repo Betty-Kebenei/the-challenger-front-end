@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="../stylesheets/challenger.css">
+        <script src="scripts/challenger.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><img src="" alt="LOGO"></li>
+                    <li><a href="index.html">THE CHALLENGER</a></li>
+                    <li class="auth"><a href="signup.html">SIGN UP</a></li>
+                    <li class="auth"><a href="signin.html">SIGN IN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="daily_data">
+                <h1>Add Daily Data</h1>
+                <form>
+                    <label for="morning_chapters">Chapters (Morning):</label>
+                    <input id="morning_chapters" type="number" name="morning_chapters" min=0 >
+                    <label for="other_chapters">Chapters (Other time):</label>
+                    <input id="other_chapters" type="number" name="other_chapters" min=0 >
+                    <label for="riser_time">Riser Time:</label>
+                    <input id="riser_time" type="datetime-local" name="riser_time">
+                    <fieldset>
+                        <legend>Notes:</legend>
+                        <input type="radio" name="notes" value="yes">Yes
+                        <input type="radio" name="notes" value="no">No
+                    </fieldset>
+                    <fieldset>
+                        <legend>Prayer:</legend>
+                        <input type="radio" name="prayed" value="yes">Yes
+                        <input type="radio" name="prayed" value="no">No
+                    </fieldset>
+                    <fieldset>
+                        <legend>SMR:</legend>
+                        <input type="radio" name="smr" value="yes">Yes
+                        <input type="radio" name="smr" value="no">No
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <section class="charts">
+                <h1>Charts and Tables</h1>
+                <h2>Reading Speeds Chart</h2>
+                <canvas id="readingChart"></canvas>
+                <script type="text/javascript" src="../scripts/readingChart.js"></script>
+                <h2>Faithfulness Table</h2>
+                <article class="faithfulness-table">
+                    <table >
+                        <tr>
+                            <th>Day</th>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td>10/7</td>
+                            <td>11/7</td>
+                        </tr>
+                        <tr>
+                            <th>Percentage</th>
+                            <td>4</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th>Notes</th>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>SMR</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>Prayer</th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <th>Data Validity</th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                    </table>
+                </article>
+                <h2>Early Riser Chart</h2>
+                <canvas id="riserChart"></canvas>
+            </section>
+        </main>
+        <footer>
+            <small>This is a challenger card</small>
+        </footer>
+    </body>
+</html>

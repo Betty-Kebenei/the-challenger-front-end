@@ -1,0 +1,85 @@
+body {
+    height: 100;
+    margin: auto;
+    
+}
+nav, footer {
+    background-color: black;
+    padding: 5px;
+    color:white;
+    font-weight: bold;
+}
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    color:white;
+}
+nav ul {
+    position: sticky;
+    top: 0;
+}
+nav ul li {
+    display: inline-block;
+    padding:5px;  
+}
+nav ul li a:active {
+    background-color: #1414f0;
+}
+li.auth {
+    float: right;
+}
+main {
+    min-height: 100vw;
+    margin-top: 0px;
+}
+.daily_data {
+    width: 20%;
+    min-height: 100vw;
+    background-color: whitesmoke;
+    float: left;
+}
+form {
+    padding:10px;
+}
+form input {
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+}
+form input:focus {
+    border: 1px solid rgb(173, 178, 230);
+}
+form input[type='submit'] {
+    background-color: grey;
+    margin-top: 5%;
+    float: right;
+}
+fieldset {
+    border: 0;
+    padding: 0;
+}
+form input[type='radio'] {
+    display: inline;
+}
+
+form input {
+    padding: 10px;
+}
+.charts {
+    float: right;
+    width: 70%;
+    padding: 0% 5%;
+    min-height: 100vw;
+}
+.faithfulness-table table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.faithfulness-table th, td {
+    padding: 5px;
+    text-align: left;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+}
