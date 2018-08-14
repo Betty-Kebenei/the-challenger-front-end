@@ -71,6 +71,14 @@ form input {
     padding: 0% 5%;
     min-height: 100vw;
 }
+.faithfulness-table table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.faithfulness-table th, td {
+    padding: 5px;
+    text-align: left;
+}
 footer {
     text-align: center;
     padding: 15px;
