@@ -122,12 +122,11 @@ var Barchart = function(options){
 var myBarchart = new Barchart(
     {
         canvas:readingChart,
-        // axisX: { title: axisX},
         seriesName:"Dates",
         padding:20,
         gridScale:1,
         gridColor:"#0000ff",
-        data:myVinyls,
+        data:data,
         colors:["#808080"]
     }
 );
