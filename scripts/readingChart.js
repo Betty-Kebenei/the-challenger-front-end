@@ -21,7 +21,7 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height, color){
     ctx.restore();
 }
 
-var myVinyls = {
+var data = {
     "1": 10,
     "2": 14,
     "3": 2,
