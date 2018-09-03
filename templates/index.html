@@ -20,31 +20,18 @@
         </header>
         <main>
             <section class="daily_data">
-                <h1>Add Daily Data</h1>
-                <form>
-                    <label for="morning_chapters">Chapters (Morning):</label>
-                    <input id="morning_chapters" type="number" name="morning_chapters" min=0 >
-                    <label for="other_chapters">Chapters (Other time):</label>
-                    <input id="other_chapters" type="number" name="other_chapters" min=0 >
-                    <label for="riser_time">Riser Time:</label>
-                    <input id="riser_time" type="datetime-local" name="riser_time">
-                    <fieldset>
-                        <legend>Notes:</legend>
-                        <input type="radio" name="notes" value="yes">Yes
-                        <input type="radio" name="notes" value="no">No
-                    </fieldset>
-                    <fieldset>
-                        <legend>Prayer:</legend>
-                        <input type="radio" name="prayed" value="yes">Yes
-                        <input type="radio" name="prayed" value="no">No
-                    </fieldset>
-                    <fieldset>
-                        <legend>SMR:</legend>
-                        <input type="radio" name="smr" value="yes">Yes
-                        <input type="radio" name="smr" value="no">No
-                    </fieldset>
-                    <input type="submit" value="Submit">
+
+                <button type="button" onclick="addMonthForm()">Add New Month Form</button>
+                <script type="text/javascript" src="../scripts/challenger.js"></script>
+
+                <form id="month-form" style="display:none;">
+                    <input id="fromDate" type="date" name="fromDate">
+                    <input id="toDate" type="date" name="toDate">
+                    <input type="button" value="Add">
+                    <input type="button" value="Cancel">
                 </form>
+
+                <h1>28 Days Month Forms</h1>
             </section>
             <section class="charts">
                 <h1>Charts and Tables</h1>
