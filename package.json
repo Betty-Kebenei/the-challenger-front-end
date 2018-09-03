@@ -1,0 +1,22 @@
+{
+  "name": "the-challenger-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Betty-Kebenei/the-challenger-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Betty-Kebenei/the-challenger-front-end/issues"
+  },
+  "homepage": "https://github.com/Betty-Kebenei/the-challenger-front-end#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

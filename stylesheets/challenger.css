@@ -88,3 +88,7 @@ footer {
 #month-form input[value='Add'] {
     float: right;
 }
+
+#month-lists {
+   line-height: 2vw;
+}
