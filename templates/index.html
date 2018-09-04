@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
         <link rel="stylesheet" href="../stylesheets/challenger.css">
-        <script src="scripts/challenger.js"></script>
     </head>
     <body>
         <header>
@@ -27,7 +26,7 @@
                 <form id="month-form" style="display:none;">
                     <input id="fromDate" type="date" name="fromDate">
                     <input id="toDate" type="date" name="toDate">
-                    <input type="button" value="Add">
+                    <input type="button" onclick="postMonthForm()" value="Add">
                     <input type="button" value="Cancel">
                 </form>
 

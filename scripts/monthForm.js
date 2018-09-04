@@ -10,8 +10,20 @@ async function getAllMonthForms() {
             document.getElementById("month-lists").appendChild(node);
         })  
     } catch (error) {
-        console.log(error.data); //Try using a toast.
+        console.log(error.response.data); //Try using a toast.
     }
 }
-
 getAllMonthForms();
+
+async function postMonthForm() {
+    const data = {
+        fromDate: document.getElementById('month-form').elements[0].value,
+        toDate: document.getElementById('month-form').elements[1].value
+    }
+    try {
+        const response = await axios.post(`${BaseURL}`, data);
+        console.log(response.data.message)
+    } catch(error) {
+        console.log(error.response.data); //Try using a toast.
+    }
+}
