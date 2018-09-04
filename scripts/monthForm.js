@@ -23,7 +23,8 @@ async function postMonthForm() {
     try {
         const response = await axios.post(`${BaseURL}`, data);
         snackbar(response.data.message, "snackbar-success");
-        getAllMonthForms()
+        addMonthForm();
+        getAllMonthForms();
     } catch(error) {
         snackbar(error.response.data, "snackbar-failure");
     }
