@@ -1,8 +1,8 @@
-var readingChart = document.getElementById("readingChart");
+let readingChart = document.getElementById("readingChart");
 readingChart.width = 500;
 readingChart.height = 300;
   
-var ctx = readingChart.getContext("2d");
+let ctx = readingChart.getContext("2d");
 
 function drawLine(ctx, startX, startY, endX, endY, color){
     ctx.save();
@@ -21,7 +21,7 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height, color){
     ctx.restore();
 }
 
-var data = {
+let data = {
     "1": 10,
     "2": 14,
     "3": 2,
@@ -52,24 +52,24 @@ var data = {
     "28": 12,
 };
 
-var Barchart = function(options){
+let Barchart = function(options){
     this.options = options;
     this.canvas = options.canvas;
     this.ctx = this.canvas.getContext("2d");
     this.colors = options.colors;
   
     this.draw = function(){
-        var maxValue = 0;
-        for (var categ in this.options.data){
+        let maxValue = 0;
+        for (let categ in this.options.data){
             maxValue = Math.max(maxValue,this.options.data[categ]);
         }
-        var canvasActualHeight = this.canvas.height - this.options.padding * 2;
-        var canvasActualWidth = this.canvas.width - this.options.padding * 2;
+        let canvasActualHeight = this.canvas.height - this.options.padding * 2;
+        let canvasActualWidth = this.canvas.width - this.options.padding * 2;
  
         //drawing the grid lines
-        var gridValue = 0;
+        let gridValue = 0;
         while (gridValue <= maxValue){
-            var gridY = canvasActualHeight * (1 - gridValue/maxValue) + this.options.padding;
+            let gridY = canvasActualHeight * (1 - gridValue/maxValue) + this.options.padding;
             drawLine(
                 this.ctx,
                 0,
@@ -90,13 +90,13 @@ var Barchart = function(options){
         }
   
         //drawing the bars
-        var barIndex = 0;
-        var numberOfBars = Object.keys(this.options.data).length;
-        var barSize = (canvasActualWidth)/numberOfBars;
+        let barIndex = 0;
+        let numberOfBars = Object.keys(this.options.data).length;
+        let barSize = (canvasActualWidth)/numberOfBars;
  
         for (categ in this.options.data){
-            var val = this.options.data[categ];
-            var barHeight = Math.round( canvasActualHeight * val/maxValue) ;
+            let val = this.options.data[categ];
+            let barHeight = Math.round( canvasActualHeight * val/maxValue) ;
             drawBar(
                 this.ctx,
                 this.options.padding + barIndex * barSize,
@@ -119,7 +119,7 @@ var Barchart = function(options){
   
     }
 }
-var myBarchart = new Barchart(
+let myBarchart = new Barchart(
     {
         canvas:readingChart,
         seriesName:"Dates",

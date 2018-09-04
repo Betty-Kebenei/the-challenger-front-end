@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
         <link rel="stylesheet" href="../stylesheets/challenger.css">
-        <script src="scripts/challenger.js"></script>
     </head>
     <body>
         <header>
@@ -19,6 +18,11 @@
             </nav>
         </header>
         <main>
+            <section>
+                <div id="snackbar-success"></div>
+                <div id="snackbar-failure"></div>
+            </section>
+
             <section class="daily_data">
 
                 <button type="button" onclick="addMonthForm()">Add New Month Form</button>
@@ -27,8 +31,8 @@
                 <form id="month-form" style="display:none;">
                     <input id="fromDate" type="date" name="fromDate">
                     <input id="toDate" type="date" name="toDate">
-                    <input type="button" value="Add">
-                    <input type="button" value="Cancel">
+                    <input type="button" onclick="postMonthForm()" value="Add">
+                    <input type="button" onclick="addMonthForm()" value="Cancel">
                 </form>
 
                 <h1>Month Forms</h1>
@@ -89,6 +93,7 @@
                 </article>
             </section>
             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script type="text/javascript" src="../scripts/snackbar.js"></script>
             <script type="text/javascript" src="../scripts/monthForm.js"></script>
         </main>
         <footer>
