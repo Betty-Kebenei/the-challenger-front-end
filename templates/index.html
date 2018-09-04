@@ -39,8 +39,39 @@
                 <ul id="month-lists">
                 </ul>
             </section>
+
             <section class="charts">
                 <h1>Charts and Tables</h1>
+
+                <div id="one-month" style="display:none;">
+                    <button type="button" onclick="addDailyDataForm()">Add Daily Data</button>
+                    <form id="daily-data-form" style="display:none;">
+                        <label for="morning_chapters">Chapters (Morning):</label>
+                        <input id="morning_chapters" type="number" name="morning_chapters" min=0 >
+                        <label for="other_chapters">Chapters (Other time):</label>
+                        <input id="other_chapters" type="number" name="other_chapters" min=0 >
+                        <label for="riser_time">Riser Time:</label>
+                        <input id="riser_time" type="datetime-local" name="riser_time">
+                        <fieldset>
+                            <legend>Notes:</legend>
+                            <input type="radio" name="notes" value="yes">Yes
+                            <input type="radio" name="notes" value="no">No
+                        </fieldset>
+                        <fieldset>
+                            <legend>Prayer:</legend>
+                            <input type="radio" name="prayed" value="yes">Yes
+                            <input type="radio" name="prayed" value="no">No
+                        </fieldset>
+                        <fieldset>
+                            <legend>SMR:</legend>
+                            <input type="radio" name="smr" value="yes">Yes
+                            <input type="radio" name="smr" value="no">No
+                        </fieldset>
+                        <input type="button" onclick="" value="Add">
+                        <input type="button" onclick="addDailyDataForm()" value="Cancel">
+                    </form>
+                </div>
+                
                 <h2>Reading Speeds Chart</h2>
                 <article>
                         <canvas id="readingChart"></canvas>
@@ -95,6 +126,7 @@
             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
             <script type="text/javascript" src="../scripts/snackbar.js"></script>
             <script type="text/javascript" src="../scripts/monthForm.js"></script>
+            <script type="text/javascript" src="../scripts/dailyData.js"></script>
         </main>
         <footer>
             <small>This is a challenger card</small>
