@@ -10,7 +10,7 @@ async function getAllMonthForms() {
             document.getElementById("month-lists").appendChild(node);
         })  
     } catch (error) {
-        console.log(error.response.data); //Try using a toast.
+        snackbar(error.response.data, "snackbar-failure");
     }
 }
 getAllMonthForms();
@@ -22,8 +22,9 @@ async function postMonthForm() {
     }
     try {
         const response = await axios.post(`${BaseURL}`, data);
-        console.log(response.data.message)
+        snackbar(response.data.message, "snackbar-success");
+        getAllMonthForms()
     } catch(error) {
-        console.log(error.response.data); //Try using a toast.
+        snackbar(error.response.data, "snackbar-failure");
     }
 }
