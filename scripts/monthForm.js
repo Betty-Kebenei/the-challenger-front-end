@@ -4,8 +4,8 @@ async function getAllMonthForms() {
     try {
         const response = await axios.get(`${BaseURL}`);
         response.data.forEach((data) => {
-            var node = document.createElement("LI");
-            var textnode = document.createTextNode('From: ' + data.fromDate + ' To: ' + data.toDate );
+            let node = document.createElement("LI");
+            let textnode = document.createTextNode('From: ' + data.fromDate + ' To: ' + data.toDate );
             node.appendChild(textnode);
             document.getElementById("month-lists").appendChild(node);
         })  
