@@ -1,9 +1,21 @@
-function addMonthForm() {
-    let monthForm = document.getElementById('month-form');
-    if (monthForm.style.display === "none") {
-        monthForm.style.display = "block";
+function hideAndShow(id) {
+    let elem = document.getElementById(id);
+    if(elem.style.display === "none"){
+        elem.style.display = "block";
     } else {
-        monthForm.style.display = "none";
+       elem.style.display = "none"; 
     }
+}
+
+function addMonthForm() {
+    hideAndShow('month-form');
+}
+
+function displayAMonthsData() {
+    hideAndShow('one-month');
+}
+
+function addDailyDataForm() {
+    hideAndShow('daily-data-form');
 }
 
