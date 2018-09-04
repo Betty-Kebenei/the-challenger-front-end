@@ -31,10 +31,11 @@ getAllMonthForms();
 
 //GET a single month form.
 async function getAMonth() {
-    let id = event.target.id;
+    let month_id = event.target.id;
     try {
-        const response = await axios.get(`${BaseURL}/${id}`);
+        const response = await axios.get(`${BaseURL}/${month_id}`);
         displayAMonthsData()
+        getAllDailyData(month_id)
     } catch(error) {
         snackbar(error.response.data, "snackbar-failure");
     }
